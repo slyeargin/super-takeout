@@ -1,0 +1,15 @@
+{"name":"bacon", "menu":"breakfast", "cost":2.50, "calories":300}
+{"name":"eggs", "menu":"breakfast", "cost":2.50, "calories":150}
+{"name":"oatmeal", "menu":"breakfast", "cost":2.50, "calories":200}
+{"name":"taco", "menu":"lunch", "cost":2.50, "calories":300}
+{"name":"quesadilla", "menu":"lunch", "cost":2.50, "calories":400}
+{"name":"fajitas", "menu":"lunch", "cost":2.50, "calories":600}
+{"name":"nachos", "menu":"appetizer", "cost":2.50, "calories":1000}
+{"name":"fried avocado", "menu":"appetizer", "cost":2.50, "calories":500}
+{"name":"enchilada", "menu":"lunch", "cost":2.50, "calories":700}
+{"name":"pasta", "menu":"dinner", "cost":2.50, "calories":600}
+{"name":"chicken", "menu":"dinner", "cost":2.50, "calories":300}
+{"name":"salmon", "menu":"dinner", "cost":2.50, "calories":250}
+{"name":"steak", "menu":"dinner", "cost":2.50, "calories":350}
+{"name":"salad", "menu":"dinner", "cost":2.50, "calories":200}
+{"name":"french fries", "menu":"appetizer", "cost":2.50, "calories":400}

@@ -1,0 +1,8 @@
+div
+  input(type='number', name='qty')
+  select.menu(name='menu')
+    option Select a Menu
+    each menu in menus
+      option #{menu}
+  select.items(name='dish')
+    option Select a Dish

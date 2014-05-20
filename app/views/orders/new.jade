@@ -1,0 +1,29 @@
+extends ../shared/template
+
+block content
+  h1= title
+
+  #greeting
+    span Your e-mail address is #{user.email}.
+
+  //- #dishes
+  //-   each dish in dishes
+  //-     .dish #{dish.name}, #{dish.menu}, #{dish.cost}, #{dish.calories}
+
+  form#order
+    div
+      input(type='number', name='qty')
+      select.menu(name='menu')
+        option Select a Menu
+        each menu in menus
+          option #{menu}
+      select.items(name='dish')
+        option Select a Dish
+
+
+
+  div
+    button#add Add Row
+
+block scripts
+  script(src='/js/es6/compiled/orders.js')
