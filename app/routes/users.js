@@ -12,9 +12,10 @@ exports.login = (req, res)=>{
   user.login(u=>{
     if(u){
       req.session.userId = u._id;
+      res.redirect('/orders');
     } else {
-      req.session.destroy();
+      req.session.userId = null;
+      res.redirect('/login');
     }
-  res.redirect('/');
   });
 };

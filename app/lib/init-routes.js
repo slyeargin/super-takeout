@@ -19,7 +19,7 @@ function load(app, fn){
   var orders = traceur.require(__dirname + '/../routes/orders.js');
   var dishes = traceur.require(__dirname + '/../routes/dishes.js');
 
-  app.get('/', dbg, home.index);
+  app.get('/', dbg, users.new);
   app.get('/help', dbg, home.help);
 
   app.get('/login', dbg, users.new);
