@@ -5,25 +5,29 @@ block content
 
   #greeting
     span Your e-mail address is #{user.email}.
+    span Your total is: $
+      span#total 0.00
+    span Your meal's calories are:
+      span#calories
 
-  //- #dishes
-  //-   each dish in dishes
-  //-     .dish #{dish.name}, #{dish.menu}, #{dish.cost}, #{dish.calories}
+  div
+    button#add Add Row
 
-  form#order
-    div
-      input(type='number', name='qty')
+  form#order(action='/orders', method='POST')
+    button#placeorder Order Food
+    div.menu-item
+      input.qty(type='number', name='qty', min='0', step='1', pattern='\d+')
       select.menu(name='menu')
         option Select a Menu
         each menu in menus
           option #{menu}
       select.items(name='dish')
         option Select a Dish
+      input.totalcost(type='hidden', name='totalcost')
+      input.totalcalories(type='hidden', name='totalcalories')
+      a.nuke(href='#') x
 
 
-
-  div
-    button#add Add Row
 
 block scripts
   script(src='/js/es6/compiled/orders.js')

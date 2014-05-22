@@ -2,6 +2,7 @@
 
 var dishes = global.nss.db.collection('dishes');
 var _ = require('lodash');
+var Mongo = require('mongodb');
 
 class Dish{
   static findAll(fn){
@@ -17,6 +18,13 @@ class Dish{
 
   static dishes(menu, fn){
     dishes.find({menu:menu}).toArray((e,d)=>fn(d));
+  }
+
+  static findByDishId(dishId, fn){
+    dishId = Mongo.ObjectID(dishId);
+    dishes.findOne({_id:dishId}, (err, d)=>{
+      fn(d);
+    });
   }
 }
 
